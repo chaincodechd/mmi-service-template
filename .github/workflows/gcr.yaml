@@ -35,5 +35,5 @@ jobs:
 
       - name: Build
         run: |
-          docker build . -t gcr.io/chaincode-consulting/buyer-app/mmi-service-template:${{ github.ref_name }}-${GITHUB_SHA::7}
+          docker build . -t gcr.io/chaincode-consulting/buyer-app/mmi-service-template:${{ github.ref_name }}-${GITHUB_SHA::7} ./webserver/Dockerfile .
           docker push gcr.io/chaincode-consulting/buyer-app/mmi-service-template:${{ github.ref_name }}-${GITHUB_SHA::7}
